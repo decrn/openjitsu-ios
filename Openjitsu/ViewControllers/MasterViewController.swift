@@ -89,6 +89,7 @@ class MasterViewController: UITableViewController {
     
     // MARK: Private methods
     
+    // NOTE: this method is no longer used, since we are now loading data over the network.
     private func loadSampleExploreItems() {
         items.append(ExploreItem(title: "Full Guard", description: "A sample description for the fullest of guards.", image: UIImage(named: "ExploreItem_Thumb")!))
         items.append(ExploreItem(title: "De La Riva Guard", description: "A sample description for De La Riva.", image: UIImage(named: "ExploreItem_Thumb")!))

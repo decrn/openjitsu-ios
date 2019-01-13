@@ -9,7 +9,12 @@
 import UIKit
 
 class LoginViewController: UIViewController {
-
+    
+    @IBAction func cancel(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
+        dismiss(animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
