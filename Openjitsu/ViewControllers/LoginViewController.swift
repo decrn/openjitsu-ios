@@ -15,14 +15,6 @@ class LoginViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    
-    - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-    {
-    if ([[segue identifier] isEqualToString:@"goBackToTableView"])  {
-    [[segue destinationViewController] set{whatEverProperyYouWantTo}: {valueOfPropertyToSet}];
-    }
-    }
-    
 
     /*
     // MARK: - Navigation
