@@ -11,6 +11,7 @@
 		EA1D7D9921EB8B8300222E17 /* ExploreItemViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D7D9821EB8B8300222E17 /* ExploreItemViewCell.swift */; };
 		EA1D7DA521EB9C4000222E17 /* ExploreItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D7DA421EB9C4000222E17 /* ExploreItem.swift */; };
 		EA1D7DA821EBB43500222E17 /* VerticalAlignLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D7DA721EBB43500222E17 /* VerticalAlignLabel.swift */; };
+		EAD8A9B621EBF89C00C44CBB /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8A9B521EBF89C00C44CBB /* WebService.swift */; };
 		EAF05CAB21EBEBD900CE3AE2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF05CAA21EBEBD900CE3AE2 /* LoginViewController.swift */; };
 		EAFD8B0421EAA34000776774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFD8B0321EAA34000776774 /* AppDelegate.swift */; };
 		EAFD8B0621EAA34000776774 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFD8B0521EAA34000776774 /* MasterViewController.swift */; };
@@ -27,6 +28,7 @@
 		EA1D7D9821EB8B8300222E17 /* ExploreItemViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreItemViewCell.swift; sourceTree = "<group>"; };
 		EA1D7DA421EB9C4000222E17 /* ExploreItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreItem.swift; sourceTree = "<group>"; };
 		EA1D7DA721EBB43500222E17 /* VerticalAlignLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalAlignLabel.swift; sourceTree = "<group>"; };
+		EAD8A9B521EBF89C00C44CBB /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		EAF05CAA21EBEBD900CE3AE2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EAFD8B0021EAA34000776774 /* Openjitsu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Openjitsu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFD8B0321EAA34000776774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +96,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		EAD8A9B721EBF8A000C44CBB /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				EAD8A9B521EBF89C00C44CBB /* WebService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		EAFD8AF721EAA34000776774 = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +129,7 @@
 				EA1D7DA321EB9BE500222E17 /* ViewControllers */,
 				EA1D7D9A21EB8B8600222E17 /* Views */,
 				EA1D7DA621EB9C4400222E17 /* Models */,
+				EAD8A9B721EBF8A000C44CBB /* Services */,
 				EAFD8B0321EAA34000776774 /* AppDelegate.swift */,
 				EAFD8B0C21EAA34100776774 /* Assets.xcassets */,
 				EAFD8B1121EAA34100776774 /* Info.plist */,
@@ -251,6 +262,7 @@
 			files = (
 				EAF05CAB21EBEBD900CE3AE2 /* LoginViewController.swift in Sources */,
 				EA1D7DA521EB9C4000222E17 /* ExploreItem.swift in Sources */,
+				EAD8A9B621EBF89C00C44CBB /* WebService.swift in Sources */,
 				EAFD8B0821EAA34000776774 /* DetailViewController.swift in Sources */,
 				EA1D7D9921EB8B8300222E17 /* ExploreItemViewCell.swift in Sources */,
 				EAFD8B0621EAA34000776774 /* MasterViewController.swift in Sources */,
