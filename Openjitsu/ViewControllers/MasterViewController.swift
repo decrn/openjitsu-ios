@@ -18,7 +18,11 @@ class MasterViewController: UITableViewController {
         super.viewDidLoad()
 
         // Load some dummy data
-        loadSampleExploreItems()
+        // loadSampleExploreItems()
+        
+        // Load real data
+        refreshTable()
+        
 
 //        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(insertNewObject(_:)))
 //        navigationItem.rightBarButtonItem = addButton
@@ -73,7 +77,7 @@ class MasterViewController: UITableViewController {
         
         cell.titleLabel.text = item.title
         cell.descriptionLabel.text = item.description
-        cell.photoImageView.image = item.photo
+        cell.photoImageView.image = item.image
         
         return cell
     }
@@ -86,11 +90,18 @@ class MasterViewController: UITableViewController {
     // MARK: Private methods
     
     private func loadSampleExploreItems() {
-        items.append(ExploreItem(title: "Full Guard", description: "A sample description for the fullest of guards.", photo: UIImage(named: "ExploreItem_Thumb")))
-        items.append(ExploreItem(title: "De La Riva Guard", description: "A sample description for De La Riva.", photo: UIImage(named: "ExploreItem_Thumb")))
-        items.append(ExploreItem(title: "Half Mount", description: "Half mount is super cool.", photo: UIImage(named: "ExploreItem_Thumb")))
-        items.append(ExploreItem(title: "Side Mount", description: "Side mount is even cooler. It's where you have side control.", photo: UIImage(named: "ExploreItem_Thumb")))
-        items.append(ExploreItem(title: "Knee on Belly", description: "Neon Bellies, they light up in the dark.", photo: UIImage(named: "ExploreItem_Thumb")))
+        items.append(ExploreItem(title: "Full Guard", description: "A sample description for the fullest of guards.", image: UIImage(named: "ExploreItem_Thumb")!))
+        items.append(ExploreItem(title: "De La Riva Guard", description: "A sample description for De La Riva.", image: UIImage(named: "ExploreItem_Thumb")!))
+        items.append(ExploreItem(title: "Half Mount", description: "Half mount is super cool.", image: UIImage(named: "ExploreItem_Thumb")!))
+        items.append(ExploreItem(title: "Side Mount", description: "Side mount is even cooler. It's where you have side control.", image: UIImage(named: "ExploreItem_Thumb")!))
+        items.append(ExploreItem(title: "Knee on Belly", description: "Neon Bellies, they light up in the dark.", image: UIImage(named: "ExploreItem_Thumb")!))
+    }
+    
+    @IBAction func refreshTable() {
+        WebService.getAllItems { completion in
+            self.items = completion != nil ? completion! : []
+            self.tableView.reloadData()
+        }
     }
 }
 

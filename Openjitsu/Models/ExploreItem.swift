@@ -27,7 +27,8 @@ extension ExploreItem {
         
         // Some safety checks to make sure we're actually getting an image
         do {
-            let imageData = try Data(contentsOf: URL(string: json["image"].stringValue)!)
+            let imageUrl = json["image"].stringValue
+            let imageData = try Data(contentsOf: URL(string: imageUrl)!)
             image = UIImage(data: imageData, scale: 1.0)!
         } catch {
             // Load a local Asset if this failed

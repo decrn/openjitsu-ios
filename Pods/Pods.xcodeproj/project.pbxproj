@@ -44,13 +44,6 @@
 			remoteGlobalIDString = E76458C58C9140B6A16D60547E68E80C;
 			remoteInfo = Alamofire;
 		};
-		EAD8A9B121EBF48A00C44CBB /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = BAC60E5CA6F7457AB51C25E610DA62FC;
-			remoteInfo = "Pods-Openjitsu";
-		};
 		EAD8A9B321EBF49300C44CBB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
@@ -358,7 +351,6 @@
 			);
 			dependencies = (
 				EAD8A9B421EBF49300C44CBB /* PBXTargetDependency */,
-				EAD8A9B221EBF48A00C44CBB /* PBXTargetDependency */,
 			);
 			name = Alamofire;
 			productName = Alamofire;
@@ -474,11 +466,6 @@
 			name = Alamofire;
 			target = E76458C58C9140B6A16D60547E68E80C /* Alamofire */;
 			targetProxy = 869154DF748021BB369714F3154F83F6 /* PBXContainerItemProxy */;
-		};
-		EAD8A9B221EBF48A00C44CBB /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = BAC60E5CA6F7457AB51C25E610DA62FC /* Pods-Openjitsu */;
-			targetProxy = EAD8A9B121EBF48A00C44CBB /* PBXContainerItemProxy */;
 		};
 		EAD8A9B421EBF49300C44CBB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
