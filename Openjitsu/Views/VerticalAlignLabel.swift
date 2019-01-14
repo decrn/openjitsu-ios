@@ -1,5 +1,5 @@
 // Custom Label to allow for vertical alignment
-// https://stackoverflow.com/a/27093495
+// SOURCE: https://stackoverflow.com/a/27093495
 
 import UIKit
 
