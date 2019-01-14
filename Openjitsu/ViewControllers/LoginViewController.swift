@@ -17,18 +17,16 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        // Turn the status bar to light since we're using a dark background
+        // Doesn't actually work though.
+        // Read more here:
+        // https://medium.com/@craiggrummitt/the-mysterious-case-of-the-status-bar-d9059a327c97
+        // SOURCE: https://stackoverflow.com/a/40295883
+        self.setNeedsStatusBarAppearanceUpdate()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    override var preferredStatusBarStyle : UIStatusBarStyle {
+        return .lightContent
     }
-    */
-
 }
