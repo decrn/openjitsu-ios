@@ -8,7 +8,7 @@ The app is built as per the specifications for **Native Apps 2: iOS**, and uses 
 
 ## Installation
 
-Clone this repository and import into **Android Studio**
+Clone this repository and import into **Xcode**
 ```bash
 git clone https://github.com/decrn/openjitsu-ios openjitsu-ios
 ```
