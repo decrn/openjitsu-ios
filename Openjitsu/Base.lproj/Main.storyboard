@@ -98,7 +98,7 @@
                                             <constraint firstAttribute="height" constant="50" id="gk4-TB-kCx"/>
                                         </constraints>
                                     </stackView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="adG-17-8Zm">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="adG-17-8Zm" customClass="YTPlayerView">
                                         <rect key="frame" x="0.0" y="66" width="343" height="193"/>
                                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -115,6 +115,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0SB-gh-fOp">
                                         <rect key="frame" x="138" y="458.5" width="67" height="30"/>
                                         <state key="normal" title="Wikipedia"/>
+                                        <connections>
+                                            <action selector="didPressWikipedia:" destination="JEX-9P-axG" eventType="touchUpInside" id="gNf-Pr-tKb"/>
+                                        </connections>
                                     </button>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="HQs-Ss-Csg">
                                         <rect key="frame" x="51.5" y="504.5" width="240" height="128"/>
@@ -170,6 +173,7 @@
                         <outlet property="favoriteButton" destination="7sK-Oc-WHf" id="pjt-Ef-EQj"/>
                         <outlet property="thumbnailImage" destination="tRR-be-1iq" id="kVb-dE-720"/>
                         <outlet property="titleLabel" destination="oKf-h8-gTF" id="Yqe-DJ-euy"/>
+                        <outlet property="videoPlayer" destination="adG-17-8Zm" id="SLs-AB-bAu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>

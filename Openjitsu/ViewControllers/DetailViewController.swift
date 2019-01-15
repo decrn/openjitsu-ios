@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import youtube_ios_player_helper
 
 class DetailViewController: UIViewController {
 
@@ -17,6 +18,9 @@ class DetailViewController: UIViewController {
     @IBOutlet var thumbnailImage: UIImageView!
     @IBOutlet var contentLabel: UILabel!
     @IBOutlet var commentsNavButton: UIBarButtonItem!
+    
+    @IBOutlet var videoPlayer: YTPlayerView!
+    
     
     func configureView() {
         
@@ -46,6 +50,21 @@ class DetailViewController: UIViewController {
                 } else {
                     commentNav.title = "\(commentCount) Comments"
                 }
+            }
+            
+            if let player = videoPlayer {
+                // https://github.com/youtube/youtube-ios-player-helper
+                let playerVars = [
+                    "playsinline" : 1,
+                    "showinfo" : 0,
+                    "rel" : 0,
+                    "modestbranding" : 1,
+                    "controls" : 1,
+                    "origin" : "https://www.example.com"
+                    ] as [String : Any]
+                
+                // TODO: load the right video url
+                player.load(withVideoId: "dQw4w9WgXcQ", playerVars: playerVars)
             }
         }
     }
@@ -87,5 +106,9 @@ class DetailViewController: UIViewController {
         }
     }
     
+    @IBAction func didPressWikipedia(_ sender: Any) {
+        // TODO: load the right page
+        UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Rickrolling")!)
+    }
 }
 
