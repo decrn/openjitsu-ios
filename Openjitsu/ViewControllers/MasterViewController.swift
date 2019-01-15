@@ -16,12 +16,18 @@ class MasterViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Load some dummy data
-        // loadSampleExploreItems()
         
-        // Load real data
-        refreshTable()
+        // show a spinner while we wait for data to load
+        // SOURCE: https://stackoverflow.com/a/50590151
+        
+        let spinner = UIActivityIndicatorView(style: .gray)
+        spinner.startAnimating()
+        tableView.backgroundView = spinner
+        
+        WebService.getAllItems { completion in
+            self.items = completion != nil ? completion! : []
+            self.tableView.reloadData()
+        }
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -53,21 +59,24 @@ class MasterViewController: UITableViewController {
         return cell
     }
     
-    // MARK: Private methods
-    
-    // NOTE: this method is no longer used, since we are now loading data over the network.
-    private func loadSampleExploreItems() {
-        items.append(ExploreItem(title: "Full Guard", description: "A sample description for the fullest of guards.", image: UIImage(named: "ExploreItem_Thumb")!))
-        items.append(ExploreItem(title: "De La Riva Guard", description: "A sample description for De La Riva.", image: UIImage(named: "ExploreItem_Thumb")!))
-        items.append(ExploreItem(title: "Half Mount", description: "Half mount is super cool.", image: UIImage(named: "ExploreItem_Thumb")!))
-        items.append(ExploreItem(title: "Side Mount", description: "Side mount is even cooler. It's where you have side control.", image: UIImage(named: "ExploreItem_Thumb")!))
-        items.append(ExploreItem(title: "Knee on Belly", description: "Neon Bellies, they light up in the dark.", image: UIImage(named: "ExploreItem_Thumb")!))
-    }
-    
-    @IBAction func refreshTable() {
-        WebService.getAllItems { completion in
-            self.items = completion != nil ? completion! : []
-            self.tableView.reloadData()
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch  segue.identifier {
+        case "showDetail"?:
+            let detailViewController = (segue.destination as! UINavigationController).topViewController as! DetailViewController
+            
+            // have to get this manually because of Peek & Pop:
+            // indexPathForSelectedRow is nil because
+            // using peek and pop we don't yet select any row.
+            //
+            let selectedCell = sender as! ExploreItemViewCell
+            let selection = tableView.indexPath(for: selectedCell)!
+            detailViewController.detailItem = items[selection.row]
+            tableView.deselectRow(at: selection, animated: true)
+        case "showLogin"?:
+            // handled in the storyboard for now
+            break;
+        default:
+            fatalError("Unknown segue")
         }
     }
 }
