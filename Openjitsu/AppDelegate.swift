@@ -19,7 +19,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         let splitViewController = window!.rootViewController as! UISplitViewController
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController
         navigationController.topViewController!.navigationItem.leftBarButtonItem = splitViewController.displayModeButtonItem
-        splitViewController.delegate = self        
+        splitViewController.delegate = self
+        
+        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).defaultTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        UISearchBar.appearance().tintColor = UIColor.white
+//        UITextField.appearance(whenContainedInInstancesOf: [UISearchBar.self]).backgroundColor = .cyan
+        
         return true
     }
 

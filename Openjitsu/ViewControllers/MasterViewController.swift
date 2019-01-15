@@ -11,7 +11,12 @@ import UIKit
 class MasterViewController: UITableViewController {
 
     var detailViewController: DetailViewController? = nil
+    
     var items = [ExploreItem]()
+    
+    // Search
+    var filteredItems = [ExploreItem]()
+    var filtering = false
 
 
     override func viewDidLoad() {
@@ -30,6 +35,15 @@ class MasterViewController: UITableViewController {
             self.items = completion != nil ? completion! : []
             self.tableView.reloadData()
         }
+        
+        // Add search bar
+        
+        let search = UISearchController(searchResultsController: nil)
+        search.searchResultsUpdater = self
+        search.searchBar.placeholder = "Explore positions"
+        
+        
+        self.navigationItem.searchController = search
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -80,6 +94,22 @@ class MasterViewController: UITableViewController {
         default:
             fatalError("Unknown segue")
         }
+    }
+}
+
+extension MasterViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        if let text = searchController.searchBar.text, !text.isEmpty {
+            self.filteredItems = self.items.filter({ (item) -> Bool in
+                return item.title.lowercased().contains(text.lowercased())
+            })
+            self.filtering = true
+        }
+        else {
+            self.filtering = false
+            self.filteredItems = [ExploreItem]()
+        }
+        self.tableView.reloadData()
     }
 }
 
