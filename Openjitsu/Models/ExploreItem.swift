@@ -11,12 +11,16 @@ import SwiftyJSON
 
 // Using structs as per the Apple Developer guidelines
 // https://developer.apple.com/documentation/swift/choosing_between_structures_and_classes
+// I was originally going to use the Codable protocol, as suggested in the "App Development with Swift" book
+// But decided on using a library to handle this to see how that works
 // Using SwiftyJSON: https://github.com/SwiftyJSON/SwiftyJSON#usage
 
 struct ExploreItem {
     let title: String
     let description: String
     let image: UIImage
+    let content: String
+    var comments: [Comment]
 }
 
 extension ExploreItem {
@@ -35,6 +39,10 @@ extension ExploreItem {
             image = UIImage(named: "ExploreItem_Thumb")!
         }
         
-        return ExploreItem(title: title, description: description, image: image)
+        let content = json["content"].stringValue
+        
+        let comments = json["comments"].arrayValue.map { Comment.fromJSON(json: $0)}
+        
+        return ExploreItem(title: title, description: description, image: image, content: content, comments: comments)
     }
 }
