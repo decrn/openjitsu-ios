@@ -24,6 +24,8 @@ class MasterViewController: UITableViewController {
         spinner.startAnimating()
         tableView.backgroundView = spinner
         
+        // Make a REST call to fetch all the data
+        
         WebService.getAllItems { completion in
             self.items = completion != nil ? completion! : []
             self.tableView.reloadData()

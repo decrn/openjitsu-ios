@@ -8,4 +8,5 @@ target 'Openjitsu' do
   # Pods for Openjitsu
   pod 'Alamofire', '~> 4.5'
   pod 'SwiftyJSON', '~> 4.0'
+  pod 'youtube-ios-player-helper', '~> 0.1.4'
 end
