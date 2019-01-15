@@ -16,7 +16,7 @@ git clone https://github.com/decrn/openjitsu-ios openjitsu-ios
 
 ## Running
 
-Target is iOS 12, built with Xcode 10.4
+Target is iOS 11, built with Xcode 10.1
 
 ## Maintainers
 
