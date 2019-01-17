@@ -21,6 +21,8 @@ struct ExploreItem {
     let image: UIImage
     let content: String
     var comments: [Comment]
+    let wikiUrl: String
+    let youtubeUrl: String
 }
 
 extension ExploreItem {
@@ -43,6 +45,9 @@ extension ExploreItem {
         
         let comments = json["comments"].arrayValue.map { Comment.fromJSON(json: $0)}
         
-        return ExploreItem(title: title, description: description, image: image, content: content, comments: comments)
+        let wikiUrl = json["wikipedia"].stringValue
+        let youtubeUrl = json["youtube"].stringValue
+        
+        return ExploreItem(title: title, description: description, image: image, content: content, comments: comments, wikiUrl: wikiUrl, youtubeUrl: youtubeUrl)
     }
 }
