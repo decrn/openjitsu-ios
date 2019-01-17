@@ -58,16 +58,16 @@
                                                                 <rect key="frame" x="0.0" y="0.0" width="273" height="50"/>
                                                                 <subviews>
                                                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="5ko-Gh-v9O">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="131" height="24"/>
+                                                                        <rect key="frame" x="0.0" y="0.0" width="144" height="29"/>
                                                                         <subviews>
                                                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Full guard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oKf-h8-gTF" customClass="VerticalAlignLabel" customModule="Openjitsu" customModuleProvider="target">
-                                                                                <rect key="frame" x="0.0" y="0.0" width="99" height="24"/>
-                                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                                                                                <rect key="frame" x="0.0" y="0.0" width="112" height="29"/>
+                                                                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="25"/>
                                                                                 <nil key="textColor"/>
                                                                                 <nil key="highlightedColor"/>
                                                                             </label>
                                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7sK-Oc-WHf">
-                                                                                <rect key="frame" x="107" y="0.0" width="24" height="24"/>
+                                                                                <rect key="frame" x="120" y="0.0" width="24" height="24"/>
                                                                                 <constraints>
                                                                                     <constraint firstAttribute="width" secondItem="7sK-Oc-WHf" secondAttribute="height" multiplier="1:1" id="Cx5-6V-lBi"/>
                                                                                     <constraint firstAttribute="height" constant="24" id="LAi-wF-ptB"/>
@@ -80,13 +80,11 @@
                                                                             </button>
                                                                         </subviews>
                                                                         <constraints>
-                                                                            <constraint firstAttribute="bottom" secondItem="7sK-Oc-WHf" secondAttribute="bottom" id="TKa-VY-Zds"/>
-                                                                            <constraint firstItem="7sK-Oc-WHf" firstAttribute="top" secondItem="5ko-Gh-v9O" secondAttribute="top" id="fZC-0B-8Ol"/>
-                                                                            <constraint firstItem="oKf-h8-gTF" firstAttribute="height" secondItem="7sK-Oc-WHf" secondAttribute="height" id="vj8-We-NAo"/>
+                                                                            <constraint firstItem="oKf-h8-gTF" firstAttribute="height" secondItem="7sK-Oc-WHf" secondAttribute="height" multiplier="1.2" id="vj8-We-NAo"/>
                                                                         </constraints>
                                                                     </stackView>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A position to Control the other using legs." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSX-H0-ka9">
-                                                                        <rect key="frame" x="0.0" y="32" width="268.5" height="18"/>
+                                                                        <rect key="frame" x="0.0" y="37" width="268.5" height="13"/>
                                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
@@ -230,7 +228,7 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="De La Riva Guard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c93-d4-iCv">
                                                             <rect key="frame" x="0.0" y="0.0" width="255" height="16"/>
-                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="18"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
