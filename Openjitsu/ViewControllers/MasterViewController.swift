@@ -41,6 +41,7 @@ class MasterViewController: UITableViewController {
         }
         
         // Add search bar
+        
         searchController.searchResultsUpdater = self
         searchController.searchBar.placeholder = "Explore positions"
         searchController.obscuresBackgroundDuringPresentation = false
@@ -105,7 +106,7 @@ class MasterViewController: UITableViewController {
             // have to get this manually because of Peek & Pop:
             // indexPathForSelectedRow is nil because
             // using peek and pop we don't yet select any row.
-            //
+
             let selectedCell = sender as! ExploreItemViewCell
             let selection = tableView.indexPath(for: selectedCell)!
             

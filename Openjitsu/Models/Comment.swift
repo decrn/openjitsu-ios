@@ -11,20 +11,21 @@ import SwiftyJSON
 
 struct Comment {
     let id: String
-    let name: String
     let username: String
-    let timestamp: String
+    let date: Date
     let content: String
 }
 
 extension Comment {
     static func fromJSON(json: JSON) -> Comment {
         let id = json["id"].stringValue
-        let name = json["name"].stringValue
         let username = json["username"].stringValue
-        let timestamp = json["timestamp"].stringValue
         let content = json["content"].stringValue
+    
+        let timestamp = json["timestamp"].doubleValue
+        let date = Date(timeIntervalSince1970: timestamp)
         
-        return Comment(id: id, name: name, username: username, timestamp: timestamp, content: content)
+        
+        return Comment(id: id, username: username, date: date, content: content)
     }
 }

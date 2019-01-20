@@ -101,10 +101,6 @@ class DetailViewController: UIViewController {
         case "showComments"?:
              let commentsViewController = segue.destination as! CommentsViewController
              commentsViewController.comments = detailItem!.comments
-             
-//             let backItem = UIBarButtonItem()
-//             backItem.title = "Test Item"
-//             navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
         default:
             fatalError("Unknown segue")
         }
@@ -112,7 +108,7 @@ class DetailViewController: UIViewController {
     
     @IBAction func didPressWikipedia(_ sender: Any) {
         // TODO: load the right page
-        UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Rickrolling")!)
+        UIApplication.shared.open(URL(string: detailItem?.wikiUrl ?? "https://en.wikipedia.org/wiki/Rickrolling")!)
     }
 }
 
