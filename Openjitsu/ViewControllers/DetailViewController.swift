@@ -64,7 +64,7 @@ class DetailViewController: UIViewController {
                     ] as [String : Any]
                 
                 // TODO: load the right video url
-                player.load(withVideoId: "dQw4w9WgXcQ", playerVars: playerVars)
+                player.load(withVideoId: "ZyK1BFZD0Qs", playerVars: playerVars)
             }
         }
     }
@@ -108,7 +108,7 @@ class DetailViewController: UIViewController {
     
     @IBAction func didPressWikipedia(_ sender: Any) {
         // TODO: load the right page
-        UIApplication.shared.open(URL(string: detailItem?.wikiUrl ?? "https://en.wikipedia.org/wiki/Rickrolling")!)
+        UIApplication.shared.open(URL(string: detailItem?.wikiUrl ?? "https://en.wikipedia.org/wiki/Guard_(grappling)")!)
     }
 }
 
