@@ -374,13 +374,12 @@
                     <navigationItem key="navigationItem" title="Explore" largeTitleDisplayMode="always" id="Zdf-7t-Un8">
                         <barButtonItem key="rightBarButtonItem" title="Account" id="3up-og-AYe">
                             <connections>
-                                <segue destination="dgD-Mk-QMK" kind="presentation" identifier="showLogin" modalPresentationStyle="overFullScreen" id="KiW-z8-SnY"/>
+                                <segue destination="3WC-9c-1fU" kind="presentation" identifier="showLogin" id="KiW-z8-SnY"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rux-fX-hf1" sceneMemberID="firstResponder"/>
-                <barButtonItem title="Item" id="NEa-hB-FX8"/>
             </objects>
             <point key="canvasLocation" x="708" y="-630.13493253373315"/>
         </scene>
@@ -389,11 +388,11 @@
             <objects>
                 <viewController id="dgD-Mk-QMK" customClass="LoginViewController" customModule="Openjitsu" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="HPo-Rb-OmG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="S1d-Pf-Xdb">
-                                <rect key="frame" x="24.5" y="209" width="326" height="269"/>
+                                <rect key="frame" x="24.5" y="167" width="326" height="269"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LaunchLogoWhite" translatesAutoresizingMaskIntoConstraints="NO" id="1mr-2v-VEv">
                                         <rect key="frame" x="25" y="0.0" width="276" height="100"/>
@@ -468,32 +467,25 @@
                                     <constraint firstAttribute="trailing" secondItem="fw6-qk-8wx" secondAttribute="trailing" constant="10" id="sGq-vD-wvc"/>
                                 </constraints>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GTo-wg-Pyy">
-                                <rect key="frame" x="10" y="20" width="72" height="49"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancel:" destination="dgD-Mk-QMK" eventType="touchUpInside" id="1aw-R1-5zo"/>
-                                    <action selector="uwot:" destination="gLg-zx-qvv" eventType="touchUpInside" id="pdg-1F-szL"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.2470588235" green="0.31764705879999999" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="GTo-wg-Pyy" firstAttribute="leading" secondItem="ZNT-Jk-QfI" secondAttribute="leading" constant="10" id="Bhu-2g-fxn"/>
                             <constraint firstItem="S1d-Pf-Xdb" firstAttribute="centerX" secondItem="ZNT-Jk-QfI" secondAttribute="centerX" id="bCo-2M-GFC"/>
-                            <constraint firstItem="GTo-wg-Pyy" firstAttribute="top" secondItem="ZNT-Jk-QfI" secondAttribute="top" id="fTn-Ky-t4q"/>
                             <constraint firstItem="S1d-Pf-Xdb" firstAttribute="centerY" secondItem="ZNT-Jk-QfI" secondAttribute="centerY" id="gZi-du-h30"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZNT-Jk-QfI"/>
                     </view>
+                    <navigationItem key="navigationItem" id="ka4-cF-0iR">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="LK8-5c-2KJ">
+                            <connections>
+                                <action selector="didPressCancelButton:" destination="dgD-Mk-QMK" id="ieG-Oq-dPk"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="whh-lZ-CBY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="gLg-zx-qvv" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1605.5999999999999" y="-630.13493253373315"/>
+            <point key="canvasLocation" x="2544.8000000000002" y="-630.13493253373315"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="r7l-gg-dq7">
@@ -518,6 +510,32 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SLD-UC-DBI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-45" y="129"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="VW2-gR-CId">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3WC-9c-1fU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" multipleTouchEnabled="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="QjL-4P-jcl">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.2470588235" green="0.31764705879999999" blue="0.70980392160000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="dgD-Mk-QMK" kind="relationship" relationship="rootViewController" id="MNm-qz-ORF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dcO-Mi-wu6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1605.5999999999999" y="-630.13493253373315"/>
         </scene>
     </scenes>
     <resources>

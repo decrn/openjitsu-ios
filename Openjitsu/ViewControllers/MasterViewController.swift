@@ -124,6 +124,10 @@ class MasterViewController: UITableViewController {
             fatalError("Unknown segue")
         }
     }
+    
+    @IBAction func unwindToExplore(unwindSegue: UIStoryboardSegue) {
+        
+    }
 }
 
 extension MasterViewController: UISearchResultsUpdating {
