@@ -9,6 +9,8 @@
 import UIKit
 
 class MasterViewController: UITableViewController {
+    
+    private let reuseIdentifier = "ExploreItemCell"
 
     var detailViewController: DetailViewController? = nil
     
@@ -65,7 +67,7 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ExploreItemCell", for: indexPath) as? ExploreItemViewCell else {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? ExploreItemViewCell else {
             fatalError("The dequeued cell is not an instance of ExploreItemViewCell")
         }
         let item: ExploreItem
