@@ -6,6 +6,13 @@ The app is built as per the specifications for **Native Apps 2: iOS**, and uses 
 
 * **Alamofire** with **SwiftyJSON** for HTTP/network functionality and JSON parsing
 
+### Screenshots
+
+![Login view](/showcase/login.png)
+![Master view](/showcase/master.png)
+![Detail view](/showcase/detail.png)
+![Comments view](/showcase/comments.png)
+
 ## Installation
 
 Clone this repository and import into **Xcode**
