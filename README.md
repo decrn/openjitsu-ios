@@ -2,9 +2,16 @@
 
 OpenJitsu is an open-source, user-driven platform for learning Brazilian Jiu-Jitsu. It offers users an intuitive app that breaks down key positions into submisssions and defenses, allowing beginners to quickly grasp concepts like Mount, Guard and Side Control, as well as advanced break downs, historical information and instructional step-by-steps for specific moves that appeal to more advanced practitioners.
 
-The app is built as per the specifications for **Native Apps 2: iOS**, and uses some frameworks and libraries under the hood:
+The app uses some frameworks and libraries under the hood:
 
 * **Alamofire** with **SwiftyJSON** for HTTP/network functionality and JSON parsing
+
+### Screenshots
+
+![Login view](/showcase/login.png)
+![Master view](/showcase/master.png)
+![Detail view](/showcase/detail.png)
+![Comments view](/showcase/comments.png)
 
 ## Installation
 
