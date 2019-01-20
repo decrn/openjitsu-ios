@@ -53,8 +53,8 @@ class DetailViewController: UIViewController {
             }
             
             if let player = videoPlayer {
-                // https://github.com/youtube/youtube-ios-player-helper
-                let playerVars = [
+                // SOURCE: https://github.com/youtube/youtube-ios-player-helper
+                let playerVars = [  
                     "playsinline" : 1,
                     "showinfo" : 0,
                     "rel" : 0,
@@ -98,9 +98,13 @@ class DetailViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch  segue.identifier {
-        //case "showComments"?:
-            // let commentsViewController = (segue.destination as! UINavigationController).topViewController as! CommentsViewController
-            // commentsViewController.comments = detailItem.comments
+        case "showComments"?:
+             let commentsViewController = segue.destination as! CommentsViewController
+             commentsViewController.comments = detailItem!.comments
+             
+//             let backItem = UIBarButtonItem()
+//             backItem.title = "Test Item"
+//             navigationItem.backBarButtonItem = backItem // This will show in the next view controller being pushed
         default:
             fatalError("Unknown segue")
         }

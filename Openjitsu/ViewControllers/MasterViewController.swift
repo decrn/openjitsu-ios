@@ -13,10 +13,11 @@ class MasterViewController: UITableViewController {
     var detailViewController: DetailViewController? = nil
     
     var items = [ExploreItem]()
-    
+
     // Search
     var filteredItems = [ExploreItem]()
     var filtering = false
+    let searchController = UISearchController(searchResultsController: nil)
 
 
     override func viewDidLoad() {
@@ -26,6 +27,7 @@ class MasterViewController: UITableViewController {
         // SOURCE: https://stackoverflow.com/a/50590151
         
         let spinner = UIActivityIndicatorView(style: .gray)
+        spinner.hidesWhenStopped = true
         spinner.startAnimating()
         tableView.backgroundView = spinner
         
@@ -37,13 +39,11 @@ class MasterViewController: UITableViewController {
         }
         
         // Add search bar
-        
-        let search = UISearchController(searchResultsController: nil)
-        search.searchResultsUpdater = self
-        search.searchBar.placeholder = "Explore positions"
-        
-        
-        self.navigationItem.searchController = search
+        searchController.searchResultsUpdater = self
+        searchController.searchBar.placeholder = "Explore positions"
+        searchController.obscuresBackgroundDuringPresentation = false
+        self.definesPresentationContext = true
+        self.navigationItem.searchController = searchController
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -58,6 +58,9 @@ class MasterViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if isFiltering() {
+            return filteredItems.count
+        }
         return items.count
     }
 
@@ -65,8 +68,13 @@ class MasterViewController: UITableViewController {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "ExploreItemCell", for: indexPath) as? ExploreItemViewCell else {
             fatalError("The dequeued cell is not an instance of ExploreItemViewCell")
         }
-
-        let item = items[indexPath.row]
+        let item: ExploreItem
+        
+        if isFiltering() {
+            item = filteredItems[indexPath.row]
+        } else {
+            item = items[indexPath.row]
+        }
         
         cell.titleLabel.text = item.title
         cell.descriptionLabel.text = item.description
@@ -74,6 +82,18 @@ class MasterViewController: UITableViewController {
         
         return cell
     }
+    
+    // MARK: Search
+    
+    func searchBarIsEmpty() -> Bool {
+        return searchController.searchBar.text?.isEmpty ?? true
+    }
+    
+    func isFiltering() -> Bool {
+        return searchController.isActive && !searchBarIsEmpty()
+    }
+    
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         switch  segue.identifier {
@@ -86,7 +106,13 @@ class MasterViewController: UITableViewController {
             //
             let selectedCell = sender as! ExploreItemViewCell
             let selection = tableView.indexPath(for: selectedCell)!
-            detailViewController.detailItem = items[selection.row]
+            
+            if isFiltering() {
+                detailViewController.detailItem = filteredItems[selection.row]
+            } else {
+                detailViewController.detailItem = items[selection.row]
+            }
+            
             tableView.deselectRow(at: selection, animated: true)
         case "showLogin"?:
             // handled in the storyboard for now
@@ -109,6 +135,7 @@ extension MasterViewController: UISearchResultsUpdating {
             self.filtering = false
             self.filteredItems = [ExploreItem]()
         }
+        tableView.backgroundView = nil
         self.tableView.reloadData()
     }
 }

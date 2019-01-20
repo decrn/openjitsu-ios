@@ -166,8 +166,11 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Full Guard" largeTitleDisplayMode="never" id="mOI-FS-AaM">
-                        <barButtonItem key="backBarButtonItem" title="Explore" id="11t-Xb-uJD"/>
-                        <barButtonItem key="rightBarButtonItem" title="Comments" id="rcE-hX-5Sh"/>
+                        <barButtonItem key="rightBarButtonItem" title="Comments" id="rcE-hX-5Sh">
+                            <connections>
+                                <segue destination="Jqn-v7-7Zm" kind="show" identifier="showComments" id="qgG-5T-unw"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="CommentsNavButton" destination="rcE-hX-5Sh" id="rKE-z4-efb"/>
@@ -183,6 +186,40 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="708" y="128.18590704647679"/>
+        </scene>
+        <!--Comments View Controller-->
+        <scene sceneID="Hto-Oh-dnD">
+            <objects>
+                <collectionViewController id="Jqn-v7-7Zm" customClass="CommentsViewController" customModule="Openjitsu" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="B3b-di-rI2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gE5-n3-iof">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" id="57v-no-phk">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="Jqn-v7-7Zm" id="fhg-LU-nfJ"/>
+                            <outlet property="delegate" destination="Jqn-v7-7Zm" id="sk8-dW-wdW"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IRg-L2-ZgR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1465" y="128"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
@@ -437,6 +474,6 @@
         <image name="Star_Filled" width="75" height="75"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="CrL-H7-6Uf"/>
+        <segue reference="6S0-TO-JiA"/>
     </inferredMetricsTieBreakers>
 </document>

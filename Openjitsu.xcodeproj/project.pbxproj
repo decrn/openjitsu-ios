@@ -13,6 +13,7 @@
 		EA1D7DA821EBB43500222E17 /* VerticalAlignLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA1D7DA721EBB43500222E17 /* VerticalAlignLabel.swift */; };
 		EAD8A9B621EBF89C00C44CBB /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8A9B521EBF89C00C44CBB /* WebService.swift */; };
 		EAD8A9BB21ED531D00C44CBB /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD8A9BA21ED531D00C44CBB /* Comment.swift */; };
+		EADF364D21F4CC6F00D8F45A /* CommentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EADF364C21F4CC6F00D8F45A /* CommentsViewController.swift */; };
 		EAF05CAB21EBEBD900CE3AE2 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF05CAA21EBEBD900CE3AE2 /* LoginViewController.swift */; };
 		EAFD8B0421EAA34000776774 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFD8B0321EAA34000776774 /* AppDelegate.swift */; };
 		EAFD8B0621EAA34000776774 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFD8B0521EAA34000776774 /* MasterViewController.swift */; };
@@ -31,6 +32,7 @@
 		EA1D7DA721EBB43500222E17 /* VerticalAlignLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerticalAlignLabel.swift; sourceTree = "<group>"; };
 		EAD8A9B521EBF89C00C44CBB /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		EAD8A9BA21ED531D00C44CBB /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		EADF364C21F4CC6F00D8F45A /* CommentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewController.swift; sourceTree = "<group>"; };
 		EAF05CAA21EBEBD900CE3AE2 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EAFD8B0021EAA34000776774 /* Openjitsu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Openjitsu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFD8B0321EAA34000776774 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				EAFD8B0521EAA34000776774 /* MasterViewController.swift */,
 				EAFD8B0721EAA34000776774 /* DetailViewController.swift */,
 				EAF05CAA21EBEBD900CE3AE2 /* LoginViewController.swift */,
+				EADF364C21F4CC6F00D8F45A /* CommentsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				EAFD8B0621EAA34000776774 /* MasterViewController.swift in Sources */,
 				EA1D7DA821EBB43500222E17 /* VerticalAlignLabel.swift in Sources */,
 				EAD8A9BB21ED531D00C44CBB /* Comment.swift in Sources */,
+				EADF364D21F4CC6F00D8F45A /* CommentsViewController.swift in Sources */,
 				EAFD8B0421EAA34000776774 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
