@@ -108,7 +108,7 @@ class DetailViewController: UIViewController {
     
     @IBAction func didPressWikipedia(_ sender: Any) {
         // TODO: load the right page
-        UIApplication.shared.open(URL(string: detailItem?.wikiUrl ?? "https://en.wikipedia.org/wiki/Guard_(grappling)")!)
+        UIApplication.shared.open(URL(string: "https://en.wikipedia.org/wiki/Guard_(grappling)")!)
     }
 }
 
