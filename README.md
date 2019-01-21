@@ -19,6 +19,7 @@ The iOS app is unique from the Android app in that it offers a few more features
 ![Master view](/showcase/master.png)
 ![Detail view](/showcase/detail.png)
 ![Comments view](/showcase/comments.png)
+![iPad view](/showcase/ipad.png)
 
 ## Installation
 
