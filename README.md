@@ -6,6 +6,13 @@ The app uses some frameworks and libraries under the hood:
 
 * **Alamofire** with **SwiftyJSON** for HTTP/network functionality and JSON parsing
 
+The iOS app is unique from the Android app in that it offers a few more features:
+
+* 3DTouch support with Peek and Pop for compatible devices (iPhone 6s and newer)
+* Mark your favorite submissions
+* Embedded Youtube video
+* Full tablet/iPad support
+
 ### Screenshots
 
 ![Login view](/showcase/login.png)
